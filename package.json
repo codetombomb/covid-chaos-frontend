@@ -1,0 +1,24 @@
+{
+  "name": "covid-chaos-frontend",
+  "version": "1.0.0",
+  "description": "Covid Chaos is JavaScript Single Page Application created for Mod 3 project at Flatiron School.",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codetombomb/covid-chaos-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codetombomb/covid-chaos-frontend/issues"
+  },
+  "homepage": "https://github.com/codetombomb/covid-chaos-frontend#readme"
+}
