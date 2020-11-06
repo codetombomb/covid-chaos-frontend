@@ -4,3 +4,5 @@ canvas.width = 600;
 canvas.height = 400;
 canvas.style.backgroundColor = 'black'
 document.body.appendChild(canvas)
+
+
