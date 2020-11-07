@@ -1,7 +1,6 @@
 const keysDown = {};
 
 window.addEventListener("keydown", function (e) {
-    console.log(e.key, e.keyCode, keysDown)
     if (["ArrowLeft", "ArrowUp", "ArrowRight", "ArrowDown"].indexOf(e.key) > -1) {
         e.preventDefault();
     }
@@ -16,26 +15,24 @@ window.addEventListener('keyup', function (e) {
 });
 
 const movePlayer = (mod) => {
-    if ("ArrowLeft" in keysDown) { // Player holding left
+    if ("ArrowLeft" in keysDown) {
         if (player.x > 0) {
             player.x -= player.speed * mod;
         }
     }
-    if ("ArrowUp" in keysDown) { // Player holding up
+    if ("ArrowUp" in keysDown) {
         if (player.y > 0) {
             player.y -= player.speed * mod;
         }
     }
-    if ("ArrowRight" in keysDown) { // Player holding right
+    if ("ArrowRight" in keysDown) {
         if (player.x < 556) {
             player.x += player.speed * mod;
         }
     }
-    if ("ArrowDown" in keysDown) { // Player holding down
+    if ("ArrowDown" in keysDown) {
         if (player.y < 356) {
             player.y += player.speed * mod;
         }
     }
 }
-
-
