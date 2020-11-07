@@ -33,12 +33,12 @@ virusImage.onload = function () {
 virusImage.src = "../assets/sprites/covid-virus.png";
 
 //load zombie sprite
-let infectedLoaded = false;
-const infectedImage = new Image();
-infectedImage.onload = function () {
-    infectedLoaded = true;
+let zombieLoaded = false;
+const zombieImage = new Image();
+zombieImage.onload = function () {
+    zombieLoaded = true;
 };
-infectedImage.src = "../assets/sprites/infected.png";
+zombieImage.src = "../assets/sprites/infected.png";
 
 //load toilet paper sprite
 let tpLoaded = false;

@@ -1,6 +1,7 @@
 let stopId;
 
 const startGame = () => {
+    makeZombies();
     makeViruses();
     update();
     mainMusic.play();
@@ -18,6 +19,11 @@ const render = () => {
     for (let i = 0; i < virusAttrs.quantity; i++) {
         virusAttrs.store[i].show();
         virusAttrs.store[i].fall();
+    }
+
+    for (let i = 0; i < zombieAttrs.quantity; i++) {
+        zombieAttrs.store[i].show();
+        zombieAttrs.store[i].fall();
     }
 }
 

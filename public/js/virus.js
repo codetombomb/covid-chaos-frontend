@@ -1,6 +1,6 @@
 class Virus {
-    constructor(virusX, virusY, width, height) {
-        this.virusX = virusX;
+    constructor(virusY, width, height) {
+        this.virusX = Math.floor(Math.random() * 580);
         this.virusY = virusY;
         this.width = width;
         this.height = height;
@@ -36,7 +36,7 @@ class Virus {
 
 const makeViruses = () => {
     for (let i = 0; i < virusAttrs.quantity; i++) {
-        virusAttrs.store.push(new Virus(virusAttrs.x, virusAttrs.y, virusAttrs.width, virusAttrs.height))
+        virusAttrs.store.push(new Virus(virusAttrs.y, virusAttrs.width, virusAttrs.height))
     }
 }
 

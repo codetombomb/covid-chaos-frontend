@@ -15,8 +15,8 @@ const player = {
 }
 
 const virusAttrs = {
-    x: Math.floor(Math.random() * 580),         //555 
-    y: Math.floor(Math.random() * 100) - 100,    // 368
+    // x: Math.floor(Math.random() * 580),
+    y: Math.floor(Math.random() * 100) - 100,
     speed: Math.floor(Math.random() * 7) + 2,
     width: 25,
     height: 25,
@@ -24,5 +24,12 @@ const virusAttrs = {
     store: []
 }
 
+const zombieAttrs = {
+    speed: Math.floor(Math.random() * 1) + 2,
+    width: 60,
+    height: 60,
+    quantity: 3,
+    store: []
+}
 
 
