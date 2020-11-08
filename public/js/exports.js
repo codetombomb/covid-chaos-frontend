@@ -41,4 +41,11 @@ const sanitizerAttrs = {
     height: 80
 }
 
+const tpAttrs = {
+    x: Math.floor(Math.random() * 555) + 1,
+    y: Math.floor(Math.random() * 368) + 1,
+    width: 45,
+    height: 30
+}
+
 
