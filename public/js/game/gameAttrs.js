@@ -7,7 +7,6 @@ const player = {
 }
 
 const virusAttrs = {
-    // x: Math.floor(Math.random() * 580),
     y: Math.floor(Math.random() * 100) - 100,
     speed: Math.floor(Math.random() * 7) + 2,
     width: 25,

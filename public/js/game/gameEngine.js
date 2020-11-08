@@ -2,8 +2,10 @@ let score = 0;
 let animationStopId;
 let timerStopid;
 let timeCount = 0;
+let restartGame = false;
 
 const startGame = () => {
+    startMessage.style.display = 'none';
     makeZombies();
     makeViruses();
     update();
@@ -42,10 +44,24 @@ const render = () => {
 }
 
 const stopGame = () => {
-    console.log("STOP GAME!")
-    cough.play()
-    clearInterval(timerStopid)
+    console.log("STOP GAME!");
+    cough.play();
+    clearInterval(timerStopid);
     cancelAnimationFrame(animationStopId);
-    console.log(timerStopid, animationStopId)
+    startMessage.style.display = 'inline-block';
+    startMessage.innerText = 'Press Space to restart! '
+    restartGame = true;
 }
 
+
+function restart() {
+    score = 0;
+    timeCount = 0;
+    player.x = canvas.width / 10
+    player.y = canvas.height / 10 * 8
+    virusAttrs.store.length = 0;
+    zombieAttrs.store.length = 0;
+    mainMusic.currentTime = 0;
+    canvas.style.backgroundImage = 'url(../../assets/background/covid-chaos.png)';
+    startGame();
+}
