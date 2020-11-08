@@ -1,0 +1,23 @@
+body{
+    background-image: url('assets/background/pandemic-spread.jpg');
+}
+
+.root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+canvas{
+    border-radius: 10px;
+}
+
+button {
+
+}
+
+#score-timer{
+    color: white;
+}
+
+#timer {
+}

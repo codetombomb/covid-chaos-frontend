@@ -1,3 +1,4 @@
+let score = 0;
 let animationStopId;
 let timerStopid;
 let timeCount = 0;
@@ -17,7 +18,7 @@ const startGame = () => {
 
 const update = () => {
     animationStopId = window.requestAnimationFrame(update);
-    console.log(timerStopid, timeCount)
+    currentScore.innerText = score;
     render();
     movePlayer(0.02);
     getSanitizer();
