@@ -1,8 +1,8 @@
-const main = getEl("root", true);
+const root = getEl("root", true);
 
-let headline = document.createElement('h1');
+const headline = document.createElement('h1');
 headline.innerText = 'Covid Chaos'
-main.appendChild(headline);
+root.appendChild(headline);
 
 const startButton = document.createElement('button')
 startButton.innerHTML = "Start Game!"
@@ -10,6 +10,11 @@ startButton.addEventListener('click', () => {
     console.log("starting game")
     startGame();
 })
+
+const timer = document.createElement('h1');
+timer.id = "timer"
+root.appendChild(timer)
+
 document.body.appendChild(startButton)
 
 
