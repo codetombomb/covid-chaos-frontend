@@ -6,11 +6,12 @@ window.addEventListener("keydown", function (e) {
     }
 }, false);
 
-window.addEventListener('keydown', function (e) {
+window.addEventListener("keydown", function (e) {
+    console.log(e.key)
     keysDown[e.key] = true;
 });
 
-window.addEventListener('keyup', function (e) {
+window.addEventListener("keyup", function (e) {
     delete keysDown[e.key];
 });
 
