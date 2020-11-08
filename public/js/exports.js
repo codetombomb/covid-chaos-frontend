@@ -6,6 +6,8 @@ const getEl = (el, cl = false) => {
     }
 };
 
+let score = 0;
+
 const player = {
     x: canvas.width / 10,
     y: canvas.height / 10 * 8,
@@ -30,6 +32,13 @@ const zombieAttrs = {
     height: 60,
     quantity: 3,
     store: []
+}
+
+const sanitizerAttrs = {
+    x: Math.floor(Math.random() * 555) + 1,
+    y: Math.floor(Math.random() * 325) + 1,
+    width: 45,
+    height: 80
 }
 
 
