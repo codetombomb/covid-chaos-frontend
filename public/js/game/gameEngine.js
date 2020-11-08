@@ -34,6 +34,7 @@ const render = () => {
 
 const stopGame = () => {
     console.log("STOP GAME!")
+    cough.play()
     window.cancelAnimationFrame(stopId);
 }
 

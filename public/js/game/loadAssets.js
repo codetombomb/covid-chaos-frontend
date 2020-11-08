@@ -7,7 +7,7 @@ const mainMusic = new Audio();
 mainMusic.src = "../assets/audio/main-music.mp3"
 // end game sound effect
 const cough = new Audio();
-cough.src = "../assets/audio/cough.wav"
+cough.src = "../assets/audio/coughing.wav"
 // collect toilet paper
 const collectTp = new Audio();
 collectTp.src = "../assets/audio/collect-tp.wav"
