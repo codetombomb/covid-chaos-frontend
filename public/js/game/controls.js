@@ -7,7 +7,6 @@ window.addEventListener("keydown", function (e) {
 }, false);
 
 window.addEventListener("keydown", function (e) {
-    console.log(e.key)
     keysDown[e.key] = true;
 });
 

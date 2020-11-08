@@ -1,4 +1,6 @@
-let stopId;
+let animationStopId;
+let timerStopid;
+let timeCount = 0;
 
 const startGame = () => {
     makeZombies();
@@ -6,10 +8,16 @@ const startGame = () => {
     update();
     sneeze.play();
     mainMusic.play();
+    timer.innerHTML = timeCount;
+    timerStopid = setInterval(() => {
+        timeCount++;
+        getEl('timer').innerText = timeCount;
+    }, 1000);
 }
 
 const update = () => {
-    stopId = window.requestAnimationFrame(update);
+    animationStopId = window.requestAnimationFrame(update);
+    console.log(timerStopid, timeCount)
     render();
     movePlayer(0.02);
     getSanitizer();
@@ -35,6 +43,8 @@ const render = () => {
 const stopGame = () => {
     console.log("STOP GAME!")
     cough.play()
-    window.cancelAnimationFrame(stopId);
+    clearInterval(timerStopid)
+    cancelAnimationFrame(animationStopId);
+    console.log(timerStopid, animationStopId)
 }
 
