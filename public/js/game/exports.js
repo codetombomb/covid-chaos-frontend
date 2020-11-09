@@ -6,4 +6,6 @@ const getEl = (el, cl = false) => {
     }
 };
 
+let topFivePlayers;
+
 

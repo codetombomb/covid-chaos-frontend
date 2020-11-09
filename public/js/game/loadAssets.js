@@ -2,18 +2,23 @@
 //sneeze sfx
 const sneeze = new Audio();
 sneeze.src = "../assets/audio/sneezing.mp3"
+    .volume = 0.1;
 //main music
 const mainMusic = new Audio();
 mainMusic.src = "../assets/audio/main-music.mp3"
+mainMusic.volume = 0.1;
 // end game sound effect
 const cough = new Audio();
 cough.src = "../assets/audio/coughing.wav"
+cough.volume = 0.1;
 // collect toilet paper
 const collectTp = new Audio();
 collectTp.src = "../assets/audio/collect-tp.wav"
+collectTp.volume = 0.1;
 //collect sanitizer
 const collectSanitizer = new Audio();
 collectSanitizer.src = "../assets/audio/collect-sanitizer.wav"
+collectSanitizer.volume = 0.1;
 
 // INITIALIZE SPRITES
 // load player sprite

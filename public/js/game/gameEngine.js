@@ -6,6 +6,7 @@ let restartGame = false;
 
 const startGame = () => {
     startMessage.style.display = 'none';
+
     makeZombies();
     makeViruses();
     update();
