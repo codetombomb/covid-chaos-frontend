@@ -21,26 +21,22 @@ window.addEventListener('keypress', (e) => {
 
 const scoreTimer = document.createElement('div');
 scoreTimer.id = 'score-timer'
-
 const timer = document.createElement('h1');
 timer.id = 'timer';
-
 const elapsedTime = document.createElement('h1');
 elapsedTime.innerText = 'Time: ';
-
 const currentScoreLable = document.createElement('h1');
 currentScoreLable.innerText = 'Score: ';
-
 const currentScore = document.createElement('h1');
 currentScore.id = 'score'
-
 scoreTimer.appendChild(elapsedTime);
 scoreTimer.appendChild(timer);
 scoreTimer.appendChild(currentScoreLable)
 scoreTimer.appendChild(currentScore)
 getEl('canvas-wrapper').appendChild(scoreTimer);
 
-const tableAttrs = ['Username', 'Score', 'Time', 'TP Collected', 'Sanitizer Collected']
+
+const tableAttrs = ['Player Name', 'Score', 'Time', 'TP Collected', 'Sanitizer Collected']
 const createTopFiveBoard = (games) => {
     // Create 'top-five-div'
     let topFiveDiv = document.createElement('div');
@@ -66,8 +62,7 @@ const createTopFiveBoard = (games) => {
         tHeader.appendChild(tHeadLabel);
         // Username, score, time, tp_collected, sanitizer collected
     }
-    console.log(topFiveTable)
-    console.log(games[0])
+
     // Loop over all games and for each game:
     for (let j = 0; j < games.length; j++) {
         // Create a 'tr'
