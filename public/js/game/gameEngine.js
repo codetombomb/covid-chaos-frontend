@@ -1,12 +1,12 @@
 let score = 0;
+let timeCount = 0;
+let tpCollected = 0;
+let sanitizerCollected = 0;
 let animationStopId;
 let timerStopid;
-let timeCount = 0;
-let restartGame = false;
 
 const startGame = () => {
     startMessage.style.display = 'none';
-
     makeZombies();
     makeViruses();
     update();
@@ -45,19 +45,24 @@ const render = () => {
 }
 
 const stopGame = () => {
-    console.log("STOP GAME!");
+    ctx.filter = 'blur(4px)'
+    ctx.drawImage(bgImage, 0, 0);
     cough.play();
     clearInterval(timerStopid);
     cancelAnimationFrame(animationStopId);
     startMessage.style.display = 'inline-block';
     startMessage.innerText = 'Press Space to restart! '
     restartGame = true;
+    renderEndGame(tpCollected, sanitizerCollected, score, timeCount);
 }
 
 
 function restart() {
+    ctx.filter = "none"
     score = 0;
     timeCount = 0;
+    tpCollected = 0;
+    sanitizerCollected = 0;
     player.x = canvas.width / 10
     player.y = canvas.height / 10 * 8
     virusAttrs.store.length = 0;

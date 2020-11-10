@@ -60,6 +60,7 @@ canvas{
     align-items: center;
     justify-content: flex-start;
 }
+
 #canvas-wrapper :nth-child(1) { order: 1; }
 #canvas-wrapper :nth-child(2) { order: 2; }
 #canvas-wrapper :nth-child(3) { order: 0; }

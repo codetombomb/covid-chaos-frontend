@@ -11,10 +11,8 @@ getEl('canvas-wrapper').appendChild(startMessageWrapper);
 
 window.addEventListener('keypress', (e) => {
     if (e.code === 'Space' && startMessage.innerText === 'Press Space to play!' && timeCount === 0) {
-        console.log('first start')
         startGame();
     } else if (e.code === 'Space' && startMessage.innerText === 'Press Space to restart!' && timeCount > 0) {
-        console.log('restarting')
         restart();
     }
 })
