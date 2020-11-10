@@ -2,7 +2,7 @@
 //sneeze sfx
 const sneeze = new Audio();
 sneeze.src = "../assets/audio/sneezing.mp3"
-    .volume = 0.1;
+sneeze.volume = 0.1;
 //main music
 const mainMusic = new Audio();
 mainMusic.src = "../assets/audio/main-music.mp3"
