@@ -1,6 +1,6 @@
 const renderEndGame = (numTp, numSanitizer, score, time) => {
-    if (time > 1) {
-        score = time + score + 250;
+    if (time > 29) {
+        score = (time - 29) + score;
     }
     canvas.style.display = 'none';
     scoreTimer.style.display = 'none'
@@ -14,13 +14,10 @@ const renderEndGame = (numTp, numSanitizer, score, time) => {
     endHandSanitizerCollected.innerText = `SANITIZER COLLECTED: ${numSanitizer}`;
     root.style.flexDirection = 'column-reverse';
     if (score > bottomScore) {
-        endMessage.innerText = `You placed in the top five with you score of ${score}! Would you like to save?`;
+        endMessage.innerText = `You placed in the top five with you score of ${score}!`;
         enterNameDiv.style.display = 'inline-block';
-        // Create SaveScore buton in app and set display to none xxx
-        // Display inline block here on SaveScore button
         saveScoreButton.style.display = 'inline-block';
-        saveScoreButton.addEventListener('click', function (e) {
-            // e.preventDefault();
+        saveScoreButton.addEventListener('click', function () {
             let user = getEl('name-input').value
             postScore(score, time, numTp, numSanitizer, user);
         })
@@ -28,6 +25,3 @@ const renderEndGame = (numTp, numSanitizer, score, time) => {
         endMessage.innerText = 'You have been infected with COVID-19! Please go home and recover!';
     }
 }
-
-
-// CREATE THE FORM TO SUBMIT THE USERNAME BEFORE SAVE SCORE BUTN 
