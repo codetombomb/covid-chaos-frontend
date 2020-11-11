@@ -7,6 +7,7 @@ sneeze.volume = 0.1;
 const mainMusic = new Audio();
 mainMusic.src = "../assets/audio/main-music.mp3"
 mainMusic.volume = 0.1;
+mainMusic.loop = true;
 // end game sound effect
 const cough = new Audio();
 cough.src = "../assets/audio/coughing.wav"
