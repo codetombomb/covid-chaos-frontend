@@ -10,7 +10,7 @@ const postScore = (score, time, tpColl, sanColl, user) => {
         tp_collected: tpColl,
         username: user
     }
-    fetch('http://localhost:3001/games', {
+    fetch('https://covid-chaos-api.herokuapp.com/games', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
