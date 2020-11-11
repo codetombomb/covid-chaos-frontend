@@ -5,3 +5,4 @@ const getEl = (el, cl = false) => {
         return document.getElementById(el)
     }
 };
+
