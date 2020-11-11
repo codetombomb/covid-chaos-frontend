@@ -1,4 +1,8 @@
-const postScore = (score, time, tpColl, sanColl, user = null) => {
+const postScore = (score, time, tpColl, sanColl, user) => {
+    if (user === "") {
+        user = 'Anonymous';
+    }
+    debugger
     let data = {
         score: score,
         time: time,
