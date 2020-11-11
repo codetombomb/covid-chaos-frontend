@@ -12,10 +12,8 @@ getEl('canvas-wrapper').appendChild(startMessageWrapper);
 
 window.addEventListener('keypress', (e) => {
     if (e.code === 'Space' && startMessage.innerText === 'Press Space to play!' && timeCount === 0) {
-        console.log('Call Start()')
         startGame();
     } else if (e.code === 'Space' && startMessage.innerText === 'Press Space to restart!' && timeCount > 0) {
-        console.log('Call Restart()')
         restart();
     }
 })
@@ -39,7 +37,6 @@ getEl('canvas-wrapper').appendChild(scoreTimer);
 
 const tableAttrs = ['Player Name', 'Score', 'Time', 'TP Collected', 'Sanitizer Collected']
 const createTopFiveBoard = (games) => {
-    console.log(games[4].score)
     bottomScore = games[4].score;
     let topFiveDiv = document.createElement('div');
     topFiveDiv.id = 'top-five-div';
@@ -99,7 +96,6 @@ nameInput.id = 'name-input';
 enterNameDiv.appendChild(nameForm);
 nameForm.appendChild(nameLabel);
 nameForm.appendChild(nameInput);
-console.log(enterNameDiv)
 
 const saveScoreButton = document.createElement('button');
 saveScoreButton.innerText = 'Save My Score';

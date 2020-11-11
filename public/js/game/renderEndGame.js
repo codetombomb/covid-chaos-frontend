@@ -14,7 +14,6 @@ const renderEndGame = (numTp, numSanitizer, score, time) => {
     endHandSanitizerCollected.innerText = `SANITIZER COLLECTED: ${numSanitizer}`;
     root.style.flexDirection = 'column-reverse';
     if (score > bottomScore) {
-        console.log('Score:', score, 'Btm Score:', bottomScore)
         endMessage.innerText = `You placed in the top five with you score of ${score}! Would you like to save?`;
         enterNameDiv.style.display = 'inline-block';
         // Create SaveScore buton in app and set display to none xxx

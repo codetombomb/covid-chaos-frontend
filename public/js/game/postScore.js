@@ -19,7 +19,6 @@ const postScore = (score, time, tpColl, sanColl, user) => {
     })
         .then(resp => resp.json())
         .then(info => {
-            console.log('Success:', info);
         })
         .catch((error) => {
             console.error('Error:', error);
