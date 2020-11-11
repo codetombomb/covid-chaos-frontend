@@ -1,5 +1,6 @@
 const root = getEl('root', true);
 let bottomScore;
+let initialStart = false;
 
 const startMessageWrapper = document.createElement('div');
 startMessageWrapper.id = 'start-message-wrapper'
@@ -11,9 +12,10 @@ startMessageWrapper.appendChild(startMessage);
 getEl('canvas-wrapper').appendChild(startMessageWrapper);
 
 window.addEventListener('keypress', (e) => {
-    if (e.code === 'Space' && startMessage.innerText === 'Press Space to play!' && timeCount === 0) {
+    if (e.code === 'Space' && initialStart === false) {
+        initialStart = true;
         startGame();
-    } else if (e.code === 'Space' && startMessage.innerText === 'Press Space to restart!' && timeCount > 0) {
+    } else if (e.code === 'Space' && endGameDiv.style.display === 'inline-block' && timeCount > 0) {
         restart();
     }
 })

@@ -1,5 +1,4 @@
-let allPlayersURL = 'http://localhost:3001/players';
-let allGamesURL = 'http://localhost:3001/games';
+// let topFiveURL = 'http://localhost:3001/top-five'
 let topFiveURL = 'https://covid-chaos-api.herokuapp.com/top-five';
 
 

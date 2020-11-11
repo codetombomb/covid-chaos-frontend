@@ -1,3 +1,6 @@
+const gamesURL = 'https://covid-chaos-api.herokuapp.com/games'
+// const gameURL = 'http://localhost:3001/games'
+
 const postScore = (score, time, tpColl, sanColl, user) => {
     if (user === "") {
         user = 'Anonymous';
@@ -10,7 +13,7 @@ const postScore = (score, time, tpColl, sanColl, user) => {
         tp_collected: tpColl,
         username: user
     }
-    fetch('https://covid-chaos-api.herokuapp.com/games', {
+    fetch(gamesURL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
