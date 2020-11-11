@@ -1,8 +1,9 @@
 const root = getEl('root', true);
+let bottomScore;
 
 const startMessageWrapper = document.createElement('div');
 startMessageWrapper.id = 'start-message-wrapper'
-const startMessage = document.createElement('h1');;
+const startMessage = document.createElement('h1');
 startMessage.id = 'start-message';
 startMessage.innerText = 'Press Space to play!';
 startMessage.style.display = 'inline-block';
@@ -11,8 +12,10 @@ getEl('canvas-wrapper').appendChild(startMessageWrapper);
 
 window.addEventListener('keypress', (e) => {
     if (e.code === 'Space' && startMessage.innerText === 'Press Space to play!' && timeCount === 0) {
+        console.log('Call Start()')
         startGame();
     } else if (e.code === 'Space' && startMessage.innerText === 'Press Space to restart!' && timeCount > 0) {
+        console.log('Call Restart()')
         restart();
     }
 })
@@ -36,34 +39,25 @@ getEl('canvas-wrapper').appendChild(scoreTimer);
 
 const tableAttrs = ['Player Name', 'Score', 'Time', 'TP Collected', 'Sanitizer Collected']
 const createTopFiveBoard = (games) => {
-    // Create 'top-five-div'
+    bottomScore = games[4].score;
     let topFiveDiv = document.createElement('div');
     topFiveDiv.id = 'top-five-div';
     let topFiveH1 = document.createElement('h1');
     topFiveH1.innerText = 'Leader Board';
     topFiveH1.id = 'top-five-h1';
     topFiveDiv.appendChild(topFiveH1);
-    // Create 'table' element
     let topFiveTable = document.createElement('table');
-    // Set table id to top-five-table'
     topFiveTable.id = 'top-five-table';
     topFiveDiv.appendChild(topFiveTable);
-    // Create a 'tr' element and set id to 't-header'
     let tHeader = document.createElement('tr');
     tHeader.id = 't-header';
     topFiveTable.appendChild(tHeader);
-    // Loop over first game and:
     for (let i = 0; i < tableAttrs.length; i++) {
-        //for each attr, create 'th' element and append child to 't-header' or 'table' el
         let tHeadLabel = document.createElement('th');
         tHeadLabel.innerText = tableAttrs[i];
         tHeader.appendChild(tHeadLabel);
-        // Username, score, time, tp_collected, sanitizer collected
     }
-
-    // Loop over all games and for each game:
     for (let j = 0; j < games.length; j++) {
-        // Create a 'tr'
         let newRow = document.createElement('tr');
         let userName = document.createElement('td');
         userName.innerText = games[j].player.username;
@@ -83,4 +77,28 @@ const createTopFiveBoard = (games) => {
         topFiveTable.appendChild(newRow)
     }
     root.appendChild(topFiveDiv);
+    topFiveDiv.style.display = 'none';
 }
+
+const endGameDiv = document.createElement('div');
+endGameDiv.id = 'end-game-div';
+endGameDiv.style.display = 'none';
+root.appendChild(endGameDiv);
+
+const endMessage = document.createElement('h2');
+endGameDiv.appendChild(endMessage);
+
+const statsList = document.createElement('ul');
+const endScore = document.createElement('li');
+statsList.appendChild(endScore);
+const endTime = document.createElement('li');
+statsList.appendChild(endTime);
+const endTpCollected = document.createElement('li');
+statsList.appendChild(endTpCollected);
+const endHandSanitizerCollected = document.createElement('li');
+statsList.appendChild(endHandSanitizerCollected);
+
+endGameDiv.appendChild(statsList);
+
+const bonus = document.createElement('p');
+endGameDiv.appendChild(bonus)

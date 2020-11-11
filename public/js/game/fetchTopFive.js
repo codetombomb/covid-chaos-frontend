@@ -1,7 +1,7 @@
 let allPlayersURL = 'http://localhost:3001/players';
 let allGamesURL = 'http://localhost:3001/games';
 let topFiveURL = 'http://localhost:3001/top-five';
-let topFivePlayers;
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

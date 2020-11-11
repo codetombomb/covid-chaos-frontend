@@ -7,6 +7,18 @@ html{
     font-family: 'Poppins', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+ul {
+    width: 25%;
+}
+
+li {
+    list-style: none;
+}
+h2 {
+    color: rgb(251, 255, 4);
+    font-size: 2 rem;
+}
+
 .root {
     display: flex;
     flex-direction: row;
@@ -20,7 +32,6 @@ canvas{
     cursor: none;
     border-radius: .5em;
 } 
-
 
 #start-message-wrapper{
     padding: .5em;
@@ -66,17 +77,22 @@ canvas{
 #canvas-wrapper :nth-child(3) { order: 0; }
 
 #top-five-div{
-    display: flex;
     flex-direction: column;
     align-items: center;
     align-self: flex-start;
     font-size: .8rem;
     color: white;
     padding: 1em;
+    max-width: 50%;
 }
 
 #top-five-h1{
     font-size: 3em;
+    font-weight: lighter;
+}
+
+#end-game-div{
+    color: white;
 }
 
 table{

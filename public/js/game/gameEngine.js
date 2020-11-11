@@ -5,6 +5,7 @@ let sanitizerCollected = 0;
 let animationStopId;
 let timerStopid;
 
+
 const startGame = () => {
     startMessage.style.display = 'none';
     makeZombies();
@@ -45,19 +46,20 @@ const render = () => {
 }
 
 const stopGame = () => {
-    ctx.filter = 'blur(4px)'
-    ctx.drawImage(bgImage, 0, 0);
     cough.play();
     clearInterval(timerStopid);
     cancelAnimationFrame(animationStopId);
     startMessage.style.display = 'inline-block';
-    startMessage.innerText = 'Press Space to restart! '
-    restartGame = true;
+    startMessage.innerText = 'Press Space to restart!';
     renderEndGame(tpCollected, sanitizerCollected, score, timeCount);
 }
 
 
 function restart() {
+    canvas.style.display = 'inline-block';
+    getEl('top-five-div').style.display = 'none';
+    scoreTimer.style.display = 'flex'
+    endGameDiv.style.display = 'none';
     ctx.filter = "none"
     score = 0;
     timeCount = 0;
