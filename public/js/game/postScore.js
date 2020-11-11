@@ -1,11 +1,7 @@
-const topFiveURL = 'https://covid-chaos-api.herokuapp.com/top-five'
-// const topFiveURL = 'http://localhost:3001/top-five'
-
 const postScore = (score, time, tpColl, sanColl, user) => {
     if (user === "") {
         user = 'Anonymous';
     }
-    debugger
     let data = {
         score: score,
         time: time,
