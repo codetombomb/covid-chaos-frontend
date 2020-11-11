@@ -39,6 +39,7 @@ getEl('canvas-wrapper').appendChild(scoreTimer);
 
 const tableAttrs = ['Player Name', 'Score', 'Time', 'TP Collected', 'Sanitizer Collected']
 const createTopFiveBoard = (games) => {
+    console.log(games[4].score)
     bottomScore = games[4].score;
     let topFiveDiv = document.createElement('div');
     topFiveDiv.id = 'top-five-div';
@@ -87,6 +88,24 @@ root.appendChild(endGameDiv);
 
 const endMessage = document.createElement('h2');
 endGameDiv.appendChild(endMessage);
+
+const enterNameDiv = document.createElement('div');
+enterNameDiv.id = 'enter-name-div';
+enterNameDiv.style.display = 'none';
+const nameForm = document.createElement('form');
+const nameLabel = document.createElement('label');
+const nameInput = document.createElement('input');
+nameInput.id = 'name-input';
+enterNameDiv.appendChild(nameForm);
+nameForm.appendChild(nameLabel);
+nameForm.appendChild(nameInput);
+console.log(enterNameDiv)
+
+const saveScoreButton = document.createElement('button');
+saveScoreButton.innerText = 'Save My Score';
+// saveScoreButton.style.display = 'none';
+nameForm.appendChild(saveScoreButton);
+endGameDiv.appendChild(enterNameDiv);
 
 const statsList = document.createElement('ul');
 const endScore = document.createElement('li');

@@ -4,7 +4,7 @@ let tpCollected = 0;
 let sanitizerCollected = 0;
 let animationStopId;
 let timerStopid;
-
+let currentUser;
 
 const startGame = () => {
     startMessage.style.display = 'none';
@@ -56,6 +56,7 @@ const stopGame = () => {
 
 
 function restart() {
+    enterNameDiv.style.display = 'none';
     canvas.style.display = 'inline-block';
     getEl('top-five-div').style.display = 'none';
     scoreTimer.style.display = 'flex'

@@ -1,24 +1,34 @@
 const renderEndGame = (numTp, numSanitizer, score, time) => {
+    if (time > 1) {
+        score = time + score + 250;
+    }
     canvas.style.display = 'none';
     scoreTimer.style.display = 'none'
     const leaderBoard = getEl('top-five-div')
     leaderBoard.style.display = 'flex'
     leaderBoard.style.alignSelf = 'center';
+    endGameDiv.style.display = 'inline-block';
+    endScore.innerText = `SCORE: ${score}`;
+    endTime.innerText = `TIME: ${time}`;
+    endTpCollected.innerText = `TP COLLECTED: ${numTp}`;
+    endHandSanitizerCollected.innerText = `SANITIZER COLLECTED: ${numSanitizer}`;
+    root.style.flexDirection = 'column-reverse';
     if (score > bottomScore) {
-        console.log('You are in the top five!')
-        endMessage.innerText = 'You have a top five score!';
-        // Create SaveScore buton in app and set display to none
+        console.log('Score:', score, 'Btm Score:', bottomScore)
+        endMessage.innerText = `You placed in the top five with you score of ${score}! Would you like to save?`;
+        enterNameDiv.style.display = 'inline-block';
+        // Create SaveScore buton in app and set display to none xxx
         // Display inline block here on SaveScore button
-        // If current user, utton calls a POST request 
-        // Else, display create user form only uniqe username 
+        saveScoreButton.style.display = 'inline-block';
+        saveScoreButton.addEventListener('click', function (e) {
+            // e.preventDefault();
+            let user = getEl('name-input').value
+            postScore(score, time, numTp, numSanitizer, user);
+        })
     } else {
         endMessage.innerText = 'You have been infected with COVID-19! Please go home and recover!';
-        endScore.innerText = `SCORE: ${score}`;
-        endTime.innerText = `TIME: ${time}`;
-        endTpCollected.innerText = `TP COLLECTED: ${numTp}`;
-        endHandSanitizerCollected.innerText = `SANITIZER COLLECTED: ${numSanitizer}`;
-        bonus.innerText = time > 30 ? `TIME BONUS: ${time} OVERALL SCORE: ${score + time}` : 'Stay COVID free for 30 seconds to receive a time bonus!';
-        endGameDiv.style.display = 'inline-block';
-        root.style.flexDirection = 'column-reverse';
     }
 }
+
+
+// CREATE THE FORM TO SUBMIT THE USERNAME BEFORE SAVE SCORE BUTN 
