@@ -7,9 +7,9 @@ const getEl = (el, cl = false) => {
 };
 
 
-// const topFiveURL = 'https://covid-chaos-api.herokuapp.com/top-five';
-const topFiveURL = 'http://localhost:3001/top-five';
+const topFiveURL = 'https://covid-chaos-api.herokuapp.com/top-five';
+// const topFiveURL = 'http://localhost:3001/top-five';
 
-// const gamesURL = 'https://covid-chaos-api.herokuapp.com/games';
-const gamesURL = 'http://localhost:3001/games';
+const gamesURL = 'https://covid-chaos-api.herokuapp.com/games';
+// const gamesURL = 'http://localhost:3001/games';
 
