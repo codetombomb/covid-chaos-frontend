@@ -14,8 +14,17 @@
     "type": "git",
     "url": "git+https://github.com/codetombomb/covid-chaos-frontend.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Flatiron School",
+    "JavaScript",
+    "Game",
+    "Covid",
+    "Chaos",
+    "Covid-19",
+    "Covid19",
+    "Pandemic"
+  ],
+  "author": "Tom Tobar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/codetombomb/covid-chaos-frontend/issues"
