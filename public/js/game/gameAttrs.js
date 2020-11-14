@@ -16,7 +16,7 @@ const virusAttrs = {
 }
 
 const zombieAttrs = {
-    speed: Math.floor(Math.random() * 1.5) + 2,
+
     width: 60,
     height: 60,
     quantity: 3,

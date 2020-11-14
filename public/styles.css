@@ -11,12 +11,6 @@ body {
     overflow: hidden;
 }
 
-
-ul {
-    /* background-color: black; */
-    width: 20%;
-}
-
 li {
     list-style: none;
 }
@@ -58,11 +52,11 @@ canvas{
 }
 
 @keyframes blinkingText{
-    0%{     color: orangered;    }
+    0%{     color: orangered; }
     49%{    color: orangered; }
     60%{    color: transparent; }
     99%{    color:transparent;  }
-    100%{   color: orangered;    }
+    100%{   color: orangered; }
 }
 
 #score-timer{

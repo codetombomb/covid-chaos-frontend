@@ -25,7 +25,7 @@ class Zombie {
     }
 
     collisionCheck(zombieXPos, zombieYPos) {
-        if (zombieXPos < player.x + player.width - 5 && zombieXPos + this.width - 10 > player.x && zombieYPos < player.y + player.height && zombieYPos - 5 + this.height - 5 > player.y) {
+        if (zombieXPos < player.x + player.width - 5 && zombieXPos + this.width - 5 > player.x && zombieYPos < player.y + player.height - 20 && zombieYPos + this.height - 12 > player.y) {
             mainMusic.pause();
             stopGame();
         } else {
