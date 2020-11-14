@@ -27,9 +27,11 @@ h2 {
     justify-content: center;
 }
 canvas{
-    background-image: url('assets/background/covid-chaos.png');
-    background-size: cover;
-    background-position: 1em;
+    background-image: url('assets/background/instructions.png');
+    background-size: 70% 101%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: none;
     border-radius: .5em;
 } 
