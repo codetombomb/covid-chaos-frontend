@@ -7,8 +7,8 @@ const renderEndGame = (numTp, numSanitizer, score, time) => {
     }
     canvas.style.display = 'none';
     scoreTimer.style.display = 'none'
-    const leaderBoard = getEl('top-five-div')
-    leaderBoard.style.display = 'flex'
+    const leaderBoard = getEl('top-five-div');
+    leaderBoard.style.display = 'flex';
     leaderBoard.style.alignSelf = 'center';
     endGameDiv.style.display = 'flex';
     endScore.innerText = `SCORE: ${score}`;

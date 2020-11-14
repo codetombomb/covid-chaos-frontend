@@ -4,6 +4,7 @@ class Zombie {
         this.zombieY = Math.floor(Math.random() * 150) - 250;
         this.width = width;
         this.height = height;
+        this.speed = Math.floor(Math.random() * 2) + 2;
     }
 
     show() {
@@ -19,7 +20,7 @@ class Zombie {
             console.log('game over!');
         }
         else {
-            this.zombieY += zombieAttrs.speed
+            this.zombieY += this.speed;
         }
     }
 
