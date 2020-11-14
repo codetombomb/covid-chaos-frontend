@@ -1,13 +1,16 @@
 const renderEndGame = (numTp, numSanitizer, score, time) => {
     if (time > 29) {
-        score = (time - 29) + score;
+        bonus.style.display = 'inline-block';
+        let bonusScore = time - 29;
+        bonus.innerText = `BONUS: ${bonusScore}`;
+        score = bonusScore + score;
     }
     canvas.style.display = 'none';
     scoreTimer.style.display = 'none'
     const leaderBoard = getEl('top-five-div')
     leaderBoard.style.display = 'flex'
     leaderBoard.style.alignSelf = 'center';
-    endGameDiv.style.display = 'inline-block';
+    endGameDiv.style.display = 'flex';
     endScore.innerText = `SCORE: ${score}`;
     endTime.innerText = `TIME: ${time}`;
     endTpCollected.innerText = `TP COLLECTED: ${numTp}`;

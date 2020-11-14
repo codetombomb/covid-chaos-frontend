@@ -13,6 +13,7 @@ const startGame = () => {
     update();
     sneeze.play();
     mainMusic.play();
+    scoreTimer.style.display = 'flex';
     timer.innerHTML = timeCount;
     timerStopid = setInterval(() => {
         timeCount++;

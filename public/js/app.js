@@ -15,7 +15,7 @@ window.addEventListener('keypress', (e) => {
     if (e.code === 'Space' && initialStart === false) {
         initialStart = true;
         startGame();
-    } else if (e.code === 'Space' && endGameDiv.style.display === 'inline-block' && timeCount > 0) {
+    } else if (e.code === 'Space' && endGameDiv.style.display === 'flex' && timeCount > 0) {
         restart();
     }
 })
@@ -34,6 +34,7 @@ scoreTimer.appendChild(elapsedTime);
 scoreTimer.appendChild(timer);
 scoreTimer.appendChild(currentScoreLable)
 scoreTimer.appendChild(currentScore)
+scoreTimer.style.display = 'none'
 getEl('canvas-wrapper').appendChild(scoreTimer);
 
 
@@ -107,6 +108,7 @@ endGameDiv.appendChild(enterNameDiv);
 
 const statsList = document.createElement('ul');
 const endScore = document.createElement('li');
+endScore.id = 'end-score'
 statsList.appendChild(endScore);
 const endTime = document.createElement('li');
 statsList.appendChild(endTime);
@@ -114,8 +116,9 @@ const endTpCollected = document.createElement('li');
 statsList.appendChild(endTpCollected);
 const endHandSanitizerCollected = document.createElement('li');
 statsList.appendChild(endHandSanitizerCollected);
+const bonus = document.createElement('li');
+statsList.appendChild(bonus);
+bonus.style.display = 'none';
 
 endGameDiv.appendChild(statsList);
 
-const bonus = document.createElement('p');
-endGameDiv.appendChild(bonus)
