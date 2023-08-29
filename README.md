@@ -1,5 +1,4 @@
 # 🦠 Covid Chaos Frontend 🧟‍♂️
-![Covid Chaos Cover](https://raw.githubusercontent.com/codetombomb/covid-chaos-frontend/master/public/assets/images/covid_chaos.png)
 ## 📖 Contents 
 -----------------------------
 * Introduction 
