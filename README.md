@@ -42,7 +42,7 @@ This is the player character that can be manipulated by the user.
 
 ### 🛠 Installation
 -----------------------------
-* This Front end was made using [Node.js](https://nodejs.org/en/)
+* This Front end was made using JavaScript
 * Clone the repo onto your local machine
     * CD (change directory) into the cloned directory
     * run the command:
