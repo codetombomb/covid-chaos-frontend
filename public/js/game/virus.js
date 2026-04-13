@@ -17,20 +17,24 @@ class Virus {
         }
         else if (this.collisionCheck(this.virusX, this.virusY)) {
             console.log('game over!');
+            mainMusic.pause();
+            stopGame();
         }
         else {
-            this.virusX += Math.floor(Math.random() * -2) + 1
-            this.virusY += Math.floor(Math.random() * 5) + 1
+            this.virusY += Math.random() * 1.5 + 0.5
+            this.virusX += Math.random() * -0.5
         }
     }
 
     collisionCheck(virusXPos, virusYPos) {
-        if (virusXPos < player.x + player.width && virusXPos + this.width > player.x && virusYPos < player.y + player.height - 20 && virusYPos - 5 + this.height > player.y) {
-            mainMusic.pause();
-            stopGame();
-        } else {
-            return false;
-        }
+        const padding = 10;
+
+        return (
+            this.virusX + padding < player.x + player.width - padding &&
+            this.virusX + this.width - padding > player.x + padding &&
+            this.virusY + padding < player.y + player.height - padding &&
+            this.virusY + this.height - padding > player.y + padding
+        );
     }
 }
 
