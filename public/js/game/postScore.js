@@ -9,6 +9,7 @@ const postScore = (score, time, tpColl, sanColl, user) => {
         tp_collected: tpColl,
         username: user
     }
+
     fetch(gamesURL, {
         method: 'POST',
         headers: {
@@ -16,12 +17,17 @@ const postScore = (score, time, tpColl, sanColl, user) => {
         },
         body: JSON.stringify(data),
     })
-        .then(resp => resp.json())
-        .then(info => {
+        .then(resp => {
+            if (!resp.ok) {
+                throw new Error('Failed to save score');
+            }
+            return resp.json();
+        })
+        .then(() => {
+            enterNameDiv.style.display = 'none';
+            getNewTopFive();
         })
         .catch((error) => {
             console.error('Error:', error);
         });
-    enterNameDiv.style.display = 'none';
-    getNewTopFive();
 }
