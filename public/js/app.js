@@ -61,7 +61,7 @@ const createTopFiveBoard = (games) => {
     for (let j = 0; j < games.length; j++) {
         let newRow = document.createElement('tr');
         let userName = document.createElement('td');
-        userName.innerText = games[j].player.username;
+        userName.innerText = games[j].username;
         newRow.appendChild(userName);
         let score = document.createElement('td');
         score.innerText = games[j].score;
@@ -70,6 +70,7 @@ const createTopFiveBoard = (games) => {
         time.innerText = games[j].time;
         newRow.appendChild(time);
         let tpCollected = document.createElement('td');
+        // debugger
         tpCollected.innerText = games[j].tp_collected;
         newRow.appendChild(tpCollected);
         let sanitizerCollected = document.createElement('td');
@@ -102,7 +103,6 @@ nameForm.appendChild(nameInput);
 
 const saveScoreButton = document.createElement('button');
 saveScoreButton.innerText = 'Save My Score';
-// saveScoreButton.style.display = 'none';
 nameForm.appendChild(saveScoreButton);
 endGameDiv.appendChild(enterNameDiv);
 
