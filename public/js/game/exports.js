@@ -7,9 +7,9 @@ const getEl = (el, cl = false) => {
 };
 
 
-// const topFiveURL = 'https://covid-chaos-api.onrender.com/top-five';
-const topFiveURL = 'http://localhost:3001/top-five';
+const topFiveURL = 'https://chaos-server-co44.onrender.com/top-five';
+// const topFiveURL = 'http://localhost:3001/top-five';
 
-// const gamesURL = 'https://covid-chaos-api.onrender.com/games';
-const gamesURL = 'http://localhost:3001/games';
+const gamesURL = 'https://chaos-server-co44.onrender.com/games';
+// const gamesURL = 'http://localhost:3001/games';
 
